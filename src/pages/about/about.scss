@@ -1,0 +1,219 @@
+div.main_about {
+    width: 100%;
+    padding: 50px 0 50px 0;
+    background: #F1F1F1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    h3, p {
+        margin: 0;
+    }
+    
+    h3 {
+        color: #000;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;        
+    }
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        display: block;
+
+        width: 300px;
+        height: 424px;
+        flex-shrink: 0;        
+    }
+
+    p {
+        &:nth-of-type(1) {
+            width: 59vw;
+
+            color: #000;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;            
+        }
+
+        &:nth-of-type(2) {
+            color: #E91E63;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;            
+        }
+    }
+
+    form {
+        width: 59vw;
+        height: 242px;
+        flex-shrink: 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        // outline: 3px solid red;
+
+        div.simple_input {
+            width: 100%;
+            height: 55px;
+            flex-shrink: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            label {
+                color: #000;
+                text-align: center;
+                font-family: Raleway;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;                
+            }
+
+            input[type="text"] {
+                width: 100%;
+                height: 32px;
+                flex-shrink: 0;                
+
+                border-radius: 1px;
+                border: 0.5px solid rgba(0, 0, 0, 0.25);
+                background: #FFF;   
+                padding-left: 7px; 
+                box-sizing: border-box;    
+                
+                color: #000;
+                text-align: left;
+                font-family: Raleway;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 35px;
+            flex-shrink: 0;    
+            border-radius: 1px;
+            background: #616161;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #FFF;
+            text-align: center;
+            font-family: Raleway;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;            
+        }
+    }
+}
+
+
+@mixin screen320 {
+    div.main_about {
+        img {
+            width: 200px;
+            height: 282px;
+            flex-shrink: 0;            
+        }
+
+        p {
+            &:nth-of-type(1) {
+                width: 85vw;
+            }
+        }
+
+        form {
+            width: 85vw;
+        }
+    }
+}
+
+
+@mixin screen600 {
+    @include screen320;
+
+    div.main_about {
+        p {
+            &:nth-of-type(1) {
+                width: 80vw;
+            }
+        }
+
+        form {
+            width: 80vw;
+        }
+    }
+}
+
+
+@mixin screen992 {
+    div.main_about {
+        p {
+            &:nth-of-type(1) {
+                width: 70vw;
+            }
+        }
+
+        form {
+            width: 70vw;
+        }
+    }
+}
+
+
+/* Extra small devices (phones, below 600px) */
+@media only screen and (min-width: 320px) and (max-width: 599.9px) {
+    @include screen320;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767.9px) {
+    @include screen600;
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.9px) {
+    @include screen600;
+} 
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199.9px) {
+    @include screen992;
+} 
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1535.9px) {
+
+} 
+
